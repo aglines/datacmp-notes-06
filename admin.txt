@@ -2,8 +2,132 @@ admin.txt
 
 reverted to US layout kb
 setup Serenade, code dictation to save my typing fingers
-
-practice in morning, then on to todays course
-
 use Serenade?? MAYBE, still asdjusting to eng kb layout 
 
+X practice in morning, then on to todays course
+
+
+JOINING DATA W PANDAS
+Data Merging Basics
+Learn how you can merge disparate data using inner joins. By combining information from multiple sources you’ll uncover compelling insights that may have previously been hidden. You’ll also learn how the relationship between those sources, such as one-to-one or one-to-many, can affect your result.
+
+    Inner join
+    What column to merge on?
+    Your first inner join
+    Inner joins and number of rows returned
+
+    One-to-many relationships
+    One-to-many classification
+    One-to-many merge
+    
+    Merging multiple DataFrames
+    
+    Total riders in a month
+    
+    Three table merge
+    
+    One-to-many merge with multiple tables
+    
+
+Hide Details
+2
+Merging Tables With Different Join Types
+0%
+
+Take your knowledge of joins to the next level. In this chapter, you’ll work with TMDb movie data as you learn about left, right, and outer joins. You’ll also discover how to merge a table to itself and merge on a DataFrame index.
+
+    Left join
+    
+    Counting missing rows with left join
+    
+    Enriching a dataset
+    
+    How many rows with a left join?
+    
+    Other joins
+    
+    Right join to find unique movies
+    
+    Popular genres with right join
+    
+    Using outer join to select actors
+    
+    Merging a table to itself
+    
+    Self join
+    
+    How does pandas handle self joins?
+    
+    Merging on indexes
+    
+    Index merge for movie ratings
+    
+    Do sequels earn more?
+    
+
+Hide Details
+3
+Advanced Merging and Concatenating
+0%
+
+In this chapter, you’ll leverage powerful filtering techniques, including semi-joins and anti-joins. You’ll also learn how to glue DataFrames by vertically combining and using the pandas.concat function to create new datasets. Finally, because data is rarely clean, you’ll also learn how to validate your newly combined data structures.
+
+    Filtering joins
+    
+    Steps of a semi join
+    
+    Performing an anti join
+    
+    Performing a semi join
+    
+    Concatenate DataFrames together vertically
+    
+    Concatenation basics
+    
+    Concatenating with keys
+    
+    Verifying integrity
+    
+    Validating a merge
+    
+    Concatenate and merge to find common songs
+    
+
+Hide Details
+4
+Merging Ordered and Time-Series Data
+0%
+
+In this final chapter, you’ll step up a gear and learn to apply pandas' specialized methods for merging time-series and ordered data together with real-world financial and economic data from the city of Chicago. You’ll also learn how to query resulting tables using a SQL-style format, and unpivot data using the melt method.
+
+    Using merge_ordered()
+    
+    Correlation between GDP and S&P500
+    
+    Phillips curve using merge_ordered()
+    
+    merge_ordered() caution, multiple columns
+    
+    Using merge_asof()
+    
+    Using merge_asof() to study stocks
+    
+    Using merge_asof() to create dataset
+    
+    merge_asof() and merge_ordered() differences
+    
+    Selecting data with .query()
+    
+    Explore financials with .query()
+    
+    Subsetting rows with .query()
+    
+    Reshaping data with .melt()
+    
+    Select the right .melt() arguments
+    
+    Using .melt() to reshape government data
+    
+    Using .melt() for stocks vs bond performance
+    
+    Course wrap-up

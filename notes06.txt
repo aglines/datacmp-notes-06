@@ -1,0 +1,37 @@
+notes06.txt
+
+JOINING DATA W PANDAS or MERGING TABLES, same terms
+
+
+MERGE method 
+col to merge on?
+c'e two diff datasets, merge on an index-like col taht is common to both
+
+mergedFrame = old1.merge(old2, on="indexCol")
+
+- First table's columns will show first mergedFrame, then 2nd
+- The rows in mergedTable have matching values for the chosen column in both tables.
+- Column names are still unique, any matching are now col_x and col_y, specifying their source
+- to change how matching cols get suffixed : 
+    newMerged = table1.merge(table2, on='indexCol', suffixes=('_first', '_next'))
+
+- .value_counts gets the most-populated columns methinks
+- .shape gets number of rows
+
+ONE TO MANY relshps
+one to one = e/ row in L table =~ ONLY one row in R
+one to many= e/ row in L table =~ MORE THAN ONE row in R
+
+t.ex - City table, Business table. each city has lots busns, lets claim a busns can only be in one City
+
+MERGING MULTIPLE TABLES
+First two tables
+merge on COMBO of data, a LIST, to keep values unique & not erroneous
+
+mergedTable = grants.merge(liceneses, on = ['address','zip'])
+    result will just have first TWO columns be those list pairs.
+
+Now for a third table, here we have a 'ward' col name and add suffixes
+
+
+
