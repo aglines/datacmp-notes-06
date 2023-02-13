@@ -33,5 +33,65 @@ mergedTable = grants.merge(liceneses, on = ['address','zip'])
 
 Now for a third table, here we have a 'ward' col name and add suffixes
 
+################################
+
+LEFT JOIN w pNDAS
+LEFT join will return ALL rows from Left table,
+and ONLY those from R table where they match the key column we specified
+SO LEFT JOINS will probably have NULLS in those rows where the R table didnt have any matches
+
+OUTPUT of a 1to1 merge w Left join will have 
+
+OUTER JOIN  finds all rows in all tables, even if dont match
+
+OUTER JOIN cb used to find any row that is in one but NOT both tables
+
+#####################
+3  SELF JOIN
+use case - sequels to a movie. sequelId listed in its own col but we want to see its name
+evn tho the name lives in current table
+so, to duplicate data already in the table, into a different COLUMN basically
+    just to illustrate that relship clearer.
+
+Can use the default inner join, but can also self/join using RIGHT or LEFT ones
+
+###############################
+4 MERGING ON INDEXES
+
+make sure you use right_index = True
+left_index = True
+right_index = True
+
+if dt starts in csv, can just use index_col arg of read_csv method as ours index
+doesnt matter what the index col is, the merge method adjusts to use index names OR col names
+
+### Merging on MULTIINDEX
+
+sam_casts = sam.merge(casts, on=['movie_id','cast_id'])
+this is an inner join so all rows returned must match both movie and cast id
+if index is diff btwn 2 tables we merge, we can use right on and left on
+
+and if right on or L on is an index, use
+    left_index=True
+
+####################################################################
+####################################################################
+3. FILTERING JOINS 
+so far we only mutated joins, ie combine dt fr tables based on matching observations
+now we try to filter observations based on if they match an observtn from another table
+Pandas cant do this itself, we must replicate this actions
+
+SEMI-JOIN  filter Left table to ONLY cols in Left table,
+    & rows where a col in R table matches
+No cols from R are shown
+Also, theres no duplicates shown, even if theres a one to many relship
+
+
+
+
+
+
+
+
 
 

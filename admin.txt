@@ -21,47 +21,30 @@ Learn how you can merge disparate data using inner joins. By combining informati
     One-to-many merge
     
     Merging multiple DataFrames
-    
     Total riders in a month
-    
     Three table merge
-    
     One-to-many merge with multiple tables
     
-
-Hide Details
-2
-Merging Tables With Different Join Types
-0%
+2 Merging Tables With Different Join Types
 
 Take your knowledge of joins to the next level. In this chapter, you’ll work with TMDb movie data as you learn about left, right, and outer joins. You’ll also discover how to merge a table to itself and merge on a DataFrame index.
 
     Left join
-    
     Counting missing rows with left join
-    
     Enriching a dataset
-    
     How many rows with a left join?
     
     Other joins
-    
     Right join to find unique movies
-    
     Popular genres with right join
-    
-    Using outer join to select actors
+    Using outer join to select unique rows not in both tables
     
     Merging a table to itself
-    
     Self join
-    
     How does pandas handle self joins?
     
     Merging on indexes
-    
     Index merge for movie ratings
-    
     Do sequels earn more?
     
 
