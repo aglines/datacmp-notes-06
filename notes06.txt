@@ -2,7 +2,6 @@ notes06.txt
 
 JOINING DATA W PANDAS or MERGING TABLES, same terms
 
-
 MERGE method 
 col to merge on?
 c'e two diff datasets, merge on an index-like col taht is common to both
@@ -95,7 +94,122 @@ returns ONLY col from L table, none from R
 INDICATOR method adds a column "_merge" to the output, showing: BOTH, LEFT_ONLY, RIGHT_ONLY
 
 ##################
-CONNECT TABLES VERTICALLY 
+CONNECT TABLES VERTICALLY - COMBINE ROWS INTO SAME TABLE    
+
+pd.concat()
+newTable = pd.concat( [table1, table2, tbl3] )
+
+axis=0
+    #default is 0, this is vertically
+
+ignore_index=True
+    if dont want any index info
+    THIS WILL SET RESULT INDEX TO NORMAL
+    "index will now go from 0 to n-1"
+
+ignore_index=False
+keys = ['jan','feb']
+    This creates a multi-index with these keys applied to rows from whichever table
+    ignore index MUST be false here obv
+
+sort=True
+    columns wb sorted alphabetically in result
+
+join='inner'
+    if you only want MATCHING columns
+    set to outer by default, to get all rows obv
+
+##################
+VERIFYING INTEGRITY OF DT STRUCTURE
+MERGE Possible issues - unintentional one-to-many , or many-to-many relships
+
+VALIDATE method will make sure we get whatever relshp we specify, or ERROR otherwise:
+    
+.merge(validate='one_to_one')
+    'one-to-one'
+    'one-to-many'
+    'many-to-one'
+    'many-to-many'
+    
+CONCAT Possible issues - duplicate records created
+
+.concat(verify_integrity=False)
+    default is false, if set to True will raise an error if dupes exist
+    will ONLY CHECK index values, NOT COLUMNS!
+
+############################
+4. MERGE_ORDERED()  TIME SERIES & other ORDERED DATA
+
+- pd.merge_ordered(table1, table2...)
+
+    has most of the same args that other methods have
+    cols to join on - on, left-on, right_on
+    DEFAULT IS OUTER JOIN but can do inner, left, right etc
+
+- FORWARD FILLING - fills in missing data with PREVIOUS value
+fill_method='ffill'
+
+######################################
+MERGE_ASOF() - also for time-series data
+    simliar to an ordered Left join, sim features as merge_ordered
+Usually DATETIME used on, to get a value that is THE NEAREST MATCH
+so columsn MUST BE SORTED  ... SEE JPG
+WILL ALWAYS DO LEFT JOIN
+
+
+direction='forward'
+default must be backward
+direction='nearest'
+sets the nearest row to whichever IS closest, either before or after
+
+use case - when data is sampled from a process, & dates or times dont align exactly
+or time series training set, whern you dont want any future events to be visible before that point in time
+
+
+#####################
+QUERY  -  SO BASICALLY A WHERE CLAUSE IN SQL    query accept an INPUT STRING
+
+stocks.query('nike >= 90')
+stocks.query('nike > 90 and disney < 140')
+    also use or keywords ... 
+    and escape quotes...
+stocks.query('stock=="disney" or (stock=="nike" and close < 90')
+
+###############
+MELT
+
+MakeItTall = df.melt(id_vars=['company','financial'])
+
+id_vars + COLUMNS to be used as id variabvles
+    these columsn we DONT want to change, ie KEEP THESE
+    these will be first columns listed after index ok
+
+value_vars=['2018','2017']
+    UNPIVOT ONLY THESE, ie dont grab the other year values 
+
+    but the colName for value_vars becomes "variable"
+    so rename it:
+var_name=['year']
+
+    and the DATA that was in PIVOTED COLUMNS gets called "value" , so rename that:
+value_name='dollars'
+
+
+
+MELT METHOD will UNPIVOT from WIDE to LONG format.... lollll
+WIDE data is when every row relates to ONE subject,
+     like first col=NAME and then every col is about that person
+LONG or TALL  data is when one subjects data is found actross MULTIPLE rows
+
+WIDE data is PEOPLE READABLE
+bgut LONG or TALL data is more computer friendsly
+
+
+
+
+
+
+
 
 
 

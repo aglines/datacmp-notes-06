@@ -57,15 +57,10 @@ In this chapter, you’ll leverage powerful filtering techniques, including semi
     Performing a semi join
     
     Concatenate DataFrames together vertically
-    
     Concatenation basics
-    
     Concatenating with keys
-    
     Verifying integrity
-    
     Validating a merge
-    
     Concatenate and merge to find common songs
     
 
@@ -75,31 +70,19 @@ In this final chapter, you’ll step up a gear and learn to apply pandas' specia
     Using merge_ordered()
     Correlation between GDP and S&P500
     Phillips curve using merge_ordered()
-    
     merge_ordered() caution, multiple columns
     
     Using merge_asof()
-    
     Using merge_asof() to study stocks
-    
     Using merge_asof() to create dataset
-    
     merge_asof() and merge_ordered() differences
     
     Selecting data with .query()
-    
     Explore financials with .query()
-    
     Subsetting rows with .query()
     
     Reshaping data with .melt()
-    
     Select the right .melt() arguments
-    
     Using .melt() to reshape government data
-    
     Using .melt() for stocks vs bond performance
-    
-    Course wrap-up
 
-    
