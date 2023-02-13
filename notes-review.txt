@@ -22,6 +22,35 @@ print(  np.row_stack ((np_arr1, np_arr2))     )
 [[1 2 3 4]
  [5 6 7 8]]
 
+#########
 
+ILOC IS YES zero indexed BUT the zeroth index is NOT the index column, it's the first normal column
+
+
+####################################
+ADD A COL to DF using ITERROWS - 
+for loop w 2 indexes, one is the dt row youre reading, other is the dt row youre writing
+
+IN  ---------------------------------
+    MONTH day year session_id
+    a     JAN   7 2015      17357
+    b     FEB   8 2015      10011
+    ---------------------------------
+
+for j, p in logins.iterrows():
+    logins.loc[j, 'month'] = p['MONTH'].lower()
+print(logins)
+
+UT  ---------------------------------
+    MONTH  day  year  session_id month
+    a   JAN    7  2015       17357   jan
+    b   FEB    8  2015       10011   feb
+    ---------------------------------
+
+
+#########################################
+
+pyplot function / grid lines
+plt.grid()
 
 
