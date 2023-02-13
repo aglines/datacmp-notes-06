@@ -48,19 +48,12 @@ Take your knowledge of joins to the next level. In this chapter, you’ll work w
     Do sequels earn more?
     
 
-Hide Details
-3
-Advanced Merging and Concatenating
-0%
+3 Advanced Merging and Concatenating
 
 In this chapter, you’ll leverage powerful filtering techniques, including semi-joins and anti-joins. You’ll also learn how to glue DataFrames by vertically combining and using the pandas.concat function to create new datasets. Finally, because data is rarely clean, you’ll also learn how to validate your newly combined data structures.
-
     Filtering joins
-    
     Steps of a semi join
-    
     Performing an anti join
-    
     Performing a semi join
     
     Concatenate DataFrames together vertically
@@ -76,17 +69,11 @@ In this chapter, you’ll leverage powerful filtering techniques, including semi
     Concatenate and merge to find common songs
     
 
-Hide Details
-4
-Merging Ordered and Time-Series Data
-0%
+4 Merging Ordered and Time-Series Data
 
 In this final chapter, you’ll step up a gear and learn to apply pandas' specialized methods for merging time-series and ordered data together with real-world financial and economic data from the city of Chicago. You’ll also learn how to query resulting tables using a SQL-style format, and unpivot data using the melt method.
-
     Using merge_ordered()
-    
     Correlation between GDP and S&P500
-    
     Phillips curve using merge_ordered()
     
     merge_ordered() caution, multiple columns
@@ -114,3 +101,5 @@ In this final chapter, you’ll step up a gear and learn to apply pandas' specia
     Using .melt() for stocks vs bond performance
     
     Course wrap-up
+
+    

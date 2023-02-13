@@ -81,15 +81,21 @@ so far we only mutated joins, ie combine dt fr tables based on matching observat
 now we try to filter observations based on if they match an observtn from another table
 Pandas cant do this itself, we must replicate this actions
 
+###################
 SEMI-JOIN  filter Left table to ONLY cols in Left table,
     & rows where a col in R table matches
 No cols from R are shown
 Also, theres no duplicates shown, even if theres a one to many relship
 
 
+################
+ANTI JOIN - find which rows are in L table but NOT R table,
+returns ONLY col from L table, none from R 
 
+INDICATOR method adds a column "_merge" to the output, showing: BOTH, LEFT_ONLY, RIGHT_ONLY
 
-
+##################
+CONNECT TABLES VERTICALLY 
 
 
 
