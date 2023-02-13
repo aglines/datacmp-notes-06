@@ -1,0 +1,27 @@
+ADD TO PREVIOUS NOTES!
+numpy array methods
+
+np.column_stack
+np_arr1 = np.array([1,2,3,4])
+np_arr2 = np.array([5,6,7,8])
+print(  np.column_stack ((np_arr1, np_arr2))     )
+
+[[1 5]
+ [2 6]
+ [3 7]
+ [4 8]]
+
+###########################
+
+np.row_stack
+
+np_arr1 = np.array([1,2,3,4])
+np_arr2 = np.array([5,6,7,8])
+print(  np.row_stack ((np_arr1, np_arr2))     )
+
+[[1 2 3 4]
+ [5 6 7 8]]
+
+
+
+
